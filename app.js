@@ -9,7 +9,7 @@ var App = function App(options) {
   self.port      = options['port'] || process.env.PORT || DEFAULT_HTTP_LISTEN_PORT;
   self.logStream = options['logStream'] || process.stdout;
 
-  var server = this.server = express.createServer();
+  var server = this.server = express();
   server.configure(function () {
     server.use(express.logger({format: 'dev', stream: self.logStream}));
     server.use(express.bodyParser());
