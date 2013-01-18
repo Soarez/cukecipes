@@ -1,4 +1,5 @@
 var express = require('express');
+var expressLayouts = require('express-ejs-layouts');
 var Recipe  = require('./app/models/recipe');
 
 var DEFAULT_HTTP_LISTEN_PORT = 9797;
@@ -26,11 +27,10 @@ var App = function App(options) {
     });
     server.use(server.router);
     server.use(express.static(__dirname + '/public'));
+    server.set('layout', 'layouts/application');
     server.set('view engine', 'ejs');
     server.set('views', __dirname + '/app/views');
-    server.set('view options', {
-      layout: 'layouts/application'
-    });
+    server.use(expressLayouts);
   });
 
   server.get('/', function (req, res) {
@@ -39,7 +39,7 @@ var App = function App(options) {
 
   server.get('/recipes', function (req, res) {
     req.Recipe.find({}, function (err, recipes) {
-      res.render('recipes/index', {recipes: recipes});
+      res.render('recipes/index', { recipes: recipes });
     });
   });
 
