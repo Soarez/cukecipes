@@ -1,6 +1,6 @@
 {
-  "author": "Julien Biezemans <jb@jbpros.com> (http://jbpros.net)",
-  "name": "cukecipes",
+  "author": "Anthony Green",
+  "name": "CukecipesUpdates",
   "description": "Example Node.js application demonstrating Cucumber.js usages",
   "version": "0.0.0-10",
   "repository": {
@@ -11,16 +11,15 @@
     "test": "cucumber.js"
   },
   "dependencies": {
-    "mongoose": "3.1.2",
-    "express":  "2.5.8",
-    "ejs":      "0.6.1",
-    "nopt":     "1.0.10"
+    "express":  "latest",
+    "ejs":      "latest",
+    "nopt":     "latest"
   },
   "devDependencies": {
-    "cucumber":  "0.3.0",
-    "cukestall": "0.1.1",
-    "kite":      "0.0.1",
-    "async":     "0.1.22"
+    "cucumber":  "latest",
+    "cukestall": "latest",
+    "kite":      "latest",
+    "async":     "latest"
   },
   "optionalDependencies": {},
   "engines": {
