@@ -11,6 +11,7 @@
     "test": "cucumber.js"
   },
   "dependencies": {
+    "mongoose":  "latest",
     "express":  "latest",
     "ejs":      "latest",
     "nopt":     "latest"
