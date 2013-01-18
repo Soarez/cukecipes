@@ -25,12 +25,13 @@ var App = function App(options) {
       req.Recipe = Recipe.isolateInCollection("recipes-" + sandboxId);
       next();
     });
-    server.use(server.router);
     server.use(express.static(__dirname + '/public'));
     server.set('layout', 'layouts/application');
     server.set('view engine', 'ejs');
     server.set('views', __dirname + '/app/views');
     server.use(expressLayouts);
+
+    server.use(server.router);
   });
 
   server.get('/', function (req, res) {
